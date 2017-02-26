@@ -1,4 +1,28 @@
+<h1>Listing companies</h1>
 
-<p>jau</p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Owner</th>
+    <th>Contact</th>
+    <th>Email</th>
+    <th>Comments</th>
+  </tr>
 
-<h1>JAU</h1>
+  <% @companies.each do |company| %>
+    <tr>
+      <td><%= company.name %></td>
+      <td><%= company.city %></td>
+      <td><%= company.address %></td>
+      <td><%= company.phone %></td>
+      <td><%= company.owner %></td>
+      <td><%= company.contact %></td>
+      <td><%= company.email %></td>
+      <td><%= company.comments %></td>
+      <td><%= link_to 'Show', company_path(company) %></td>
+    </tr>
+  <% end %>
+</table>
