@@ -7,7 +7,7 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    
+    render plain: params[:company].inspect
   end
 
 end
