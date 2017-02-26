@@ -13,6 +13,7 @@
     <th>Contact</th>
     <th>Email</th>
     <th>Comments</th>
+    <th colspan="9"></th>
   </tr>
 
   <% @companies.each do |company| %>
@@ -26,6 +27,10 @@
       <td><%= company.email %></td>
       <td><%= company.comments %></td>
       <td><%= link_to 'Show', company_path(company) %></td>
+      <td><%= link_to 'Edit', edit_company_path(company) %></td>
+      <td><%= link_to 'Destroy', company_path(company),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
