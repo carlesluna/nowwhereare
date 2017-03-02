@@ -7,7 +7,7 @@ class CreateCompanies < ActiveRecord::Migration[5.0]
       t.string :phone
       t.string :owner
       t.string :contact
-      t.text :comments
+      t.text   :comments
       t.string :email
 
       t.timestamps
